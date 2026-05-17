@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harris & Amber 沖繩教堂婚禮 · 2026.06.26</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans TC', -apple-system, sans-serif;
+    background: linear-gradient(180deg, #E6F1FB 0%, #F8FCFF 50%, #FFFFFF 100%);
+    background-attachment: fixed;
+    color: #2C3E50;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 60px 20px 50px;
+    position: relative;
+  }
+  .hero-tag {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #185FA5;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    color: #0C447C;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+  .hero-title-zh {
+    font-size: 18px;
+    color: #185FA5;
+    font-weight: 400;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+  }
+  .hero-divider {
+    width: 50px;
+    height: 1px;
+    background: #185FA5;
+    margin: 0 auto 30px;
+    opacity: 0.4;
+  }
+  .hero-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #185FA5;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .hero-time {
+    font-size: 14px;
+    color: #5F8AAD;
+    letter-spacing: 2px;
+  }
+
+  /* Section */
+  .section {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 16px;
+    border: 0.5px solid rgba(181, 212, 244, 0.4);
+    box-shadow: 0 2px 20px rgba(55, 138, 221, 0.05);
+  }
+  .section-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #0C447C;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 1px;
+  }
+  .section-title .icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #E6F1FB;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #185FA5;
+    font-size: 14px;
+  }
+
+  /* Venue */
+  .venue-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #0C447C;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+  .venue-name-zh {
+    font-size: 13px;
+    color: #5F8AAD;
+    margin-bottom: 16px;
+  }
+  .venue-info {
+    font-size: 14px;
+    color: #2C3E50;
+    line-height: 1.8;
+    padding: 12px 14px;
+    background: #F4F9FE;
+    border-radius: 10px;
+    border-left: 3px solid #378ADD;
+  }
+  .venue-info .label {
+    color: #5F8AAD;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background: #378ADD;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .btn:hover { background: #185FA5; transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); }
+  .btn.outline {
+    background: white;
+    color: #185FA5;
+    border: 1px solid #B5D4F4;
+  }
+  .btn.outline:hover { background: #E6F1FB; }
+  .btn-full { grid-column: 1 / -1; }
+
+  /* Dress code */
+  .dress-colors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .color-dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(55, 138, 221, 0.2);
+  }
+  .color-dot.blue { background: linear-gradient(135deg, #378ADD, #185FA5); }
+  .color-dot.white { background: white; border: 1px solid #B5D4F4; }
+  .dress-theme {
+    text-align: center;
+    color: #185FA5;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+  }
+  .dress-list {
+    background: #F4F9FE;
+    border-radius: 10px;
+    padding: 14px 18px;
+  }
+  .dress-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    padding: 4px 0;
+    color: #2C3E50;
+  }
+  .check { color: #0F6E56; font-weight: bold; }
+  .cross { color: #A32D2D; font-weight: bold; }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 1.5px;
+    background: linear-gradient(180deg, #B5D4F4 0%, #FAC775 100%);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 18px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-dot {
+    position: absolute;
+    left: -28px;
+    top: 6px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #378ADD;
+    box-shadow: 0 0 0 3px rgba(55, 138, 221, 0.1);
+  }
+  .timeline-item.highlight .timeline-dot {
+    background: #378ADD;
+  }
+  .timeline-item.party .timeline-dot {
+    background: #FAC775;
+    border-color: #BA7517;
+    box-shadow: 0 0 0 3px rgba(250, 199, 117, 0.2);
+  }
+  .timeline-time {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: #185FA5;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+  .timeline-item.party .timeline-time { color: #854F0B; }
+  .timeline-event {
+    font-size: 14px;
+    color: #2C3E50;
+  }
+  .timeline-item.highlight .timeline-event,
+  .timeline-item.party .timeline-event {
+    font-weight: 500;
+  }
+  .timeline-item.party .timeline-event span {
+    color: #BA7517;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+
+  /* Tips */
+  .tips-section {
+    background: linear-gradient(135deg, #FAEEDA 0%, #FDF4E3 100%);
+    border-color: rgba(250, 199, 117, 0.4);
+  }
+  .tips-section .section-title { color: #633806; }
+  .tips-section .section-title .icon {
+    background: rgba(250, 199, 117, 0.3);
+    color: #854F0B;
+  }
+  .tip-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 13px;
+    color: #633806;
+    line-height: 1.7;
+    border-bottom: 0.5px dashed rgba(133, 79, 11, 0.2);
+  }
+  .tip-item:last-child { border-bottom: none; }
+  .tip-num {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(186, 117, 23, 0.15);
+    color: #854F0B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .tip-bold { font-weight: 500; color: #4A1B0C; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px 20px 10px;
+    color: #5F8AAD;
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+  .footer-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: #185FA5;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+  }
+
+  /* Phone link */
+  a.phone {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted #B5D4F4;
+  }
+
+  @media (max-width: 480px) {
+    .hero-title { font-size: 34px; }
+    .hero-title-zh { font-size: 16px; letter-spacing: 4px; }
+    .container { padding: 0 14px 40px; }
+    .section { padding: 22px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-tag">OKINAWA · WEDDING</div>
+    <div class="hero-title">Save the Date</div>
+    <div class="hero-title-zh">Harris & Amber 沖繩教堂婚禮</div>
+    <div class="hero-divider"></div>
+    <div class="hero-date">06 · 26 · 2026</div>
+    <div class="hero-time">THURSDAY  ·  請於 09:00 前抵達</div>
+  </div>
+
+  <!-- Venue -->
+  <div class="section">
+    <div class="section-title">
+      <span class="icon">⛪</span>
+      <span>教堂資訊</span>
+    </div>
+    <div class="venue-name">Eines Villa Di Nozze</div>
+    <div class="venue-name-zh">沖繩 · 名護</div>
+    <div class="venue-info">
+      <div class="label">地址 ADDRESS</div>
+      <div>沖縄県名護市字山入端潮平川原 361</div>
+    </div>
+    <div class="actions">
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Eines+Villa+Di+Nozze+Okinawa+%E6%B2%96%E7%B8%84%E7%9C%8C%E5%90%8D%E8%AD%B7%E5%B8%82%E5%AD%97%E5%B1%B1%E5%85%A5%E7%AB%AF%E6%BD%AE%E5%B9%B3%E5%B7%9D%E5%8E%9F361" target="_blank" rel="noopener">
+        📍 Google Maps
+      </a>
+      <a class="btn outline" href="tel:0980518877">
+        📞 0980-51-8877
+      </a>
+      <button class="btn btn-full outline" onclick="downloadICS()">
+        📅 加入行事曆
+      </button>
+    </div>
+  </div>
+
+  <!-- Dress Code -->
+  <div class="section">
+    <div class="section-title">
+      <span class="icon">👗</span>
+      <span>Dress Code</span>
+    </div>
+    <div class="dress-colors">
+      <div class="color-dot blue"></div>
+      <div class="color-dot white"></div>
+    </div>
+    <div class="dress-theme">藍 · 白 主題</div>
+    <div class="dress-list">
+      <div class="dress-item"><span class="check">✓</span>襯衫、洋裝</div>
+      <div class="dress-item"><span class="cross">✕</span>禁止拖鞋</div>
+      <div class="dress-item"><span class="cross">✕</span>婚禮儀式中禁止任意走動、拍攝</div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="section">
+    <div class="section-title">
+      <span class="icon">🕊</span>
+      <span>當天流程</span>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">08:30 — 09:00</div>
+        <div class="timeline-event">報到 &amp; 教堂休息室休息</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">09:00 — 09:30</div>
+        <div class="timeline-event">入座</div>
+      </div>
+      <div class="timeline-item highlight">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">09:30 — 10:30</div>
+        <div class="timeline-event">教堂婚禮儀式</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">10:30 — 10:45</div>
+        <div class="timeline-event">賓客散場</div>
+      </div>
+      <div class="timeline-item party">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">12:00</div>
+        <div class="timeline-event">燒肉本部牧場 本部總店 <span>After Party!</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tips -->
+  <div class="section tips-section">
+    <div class="section-title">
+      <span class="icon">✨</span>
+      <span>小提醒</span>
+    </div>
+    <div class="tip-item">
+      <div class="tip-num">1</div>
+      <div><span class="tip-bold">教堂附有停車場</span></div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-num">2</div>
+      <div>提早到達可先在外面拍照留念,<span class="tip-bold">10:30 儀式過後</span>會有下一組新人,教堂需要清場準備,就無法拍照囉</div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-num">3</div>
+      <div><span class="tip-bold">09:30 過後不能進場</span>,請注意時間提早就座</div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-num">4</div>
+      <div>教堂婚禮儀式進行中,請勿任意走動、拍攝,<span class="tip-bold">手機請關靜音</span></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-mark">— With Love —</div>
+    <div>SEE YOU IN OKINAWA</div>
+  </div>
+
+</div>
+
+<script>
+function downloadICS() {
+  // Wedding ceremony: 2026-06-26 08:30 ~ 10:45 JST (UTC+9)
+  // JST 08:30 = UTC 23:30 previous day
+  var ics = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Wedding//Okinawa//EN',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    'UID:wedding-okinawa-20260626@invite',
+    'DTSTAMP:20260101T000000Z',
+    'DTSTART:20260625T233000Z',
+    'DTEND:20260626T014500Z',
+    'SUMMARY:沖繩教堂婚禮',
+    'DESCRIPTION:請於 09:00 前抵達\\n教堂婚禮儀式 09:30-10:30\\n12:00 燒肉本部牧場 After Party\\n\\nDress Code: 藍白色主題,襯衫洋裝,禁止拖鞋',
+    'LOCATION:Eines Villa Di Nozze Okinawa, 沖縄県名護市字山入端潮平川原 361',
+    'BEGIN:VALARM',
+    'TRIGGER:-PT1H',
+    'ACTION:DISPLAY',
+    'DESCRIPTION:婚禮一小時後開始',
+    'END:VALARM',
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ].join('\r\n');
+
+  var blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+  var url = URL.createObjectURL(blob);
+  var link = document.createElement('a');
+  link.href = url;
+  link.download = 'okinawa-wedding-2026.ics';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+}
+</script>
+
+</body>
+</html>
