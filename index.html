@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harris & Amber 沖繩教堂婚禮 · 2026.06.26</title>
+<title>Harris &amp; Amber · 沖繩教堂婚禮 · 2026.06.26</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -342,8 +342,8 @@
   <!-- Hero -->
   <div class="hero">
     <div class="hero-tag">OKINAWA · WEDDING</div>
-    <div class="hero-title">Save the Date</div>
-    <div class="hero-title-zh">Harris & Amber 沖繩教堂婚禮</div>
+    <div class="hero-title">Harris &amp; Amber</div>
+    <div class="hero-title-zh">沖繩教堂婚禮</div>
     <div class="hero-divider"></div>
     <div class="hero-date">06 · 26 · 2026</div>
     <div class="hero-time">THURSDAY  ·  請於 09:00 前抵達</div>
@@ -388,7 +388,6 @@
     <div class="dress-list">
       <div class="dress-item"><span class="check">✓</span>襯衫、洋裝</div>
       <div class="dress-item"><span class="cross">✕</span>禁止拖鞋</div>
-      <div class="dress-item"><span class="cross">✕</span>婚禮儀式中禁止任意走動、拍攝</div>
     </div>
   </div>
 
@@ -460,8 +459,8 @@
 
 <script>
 function downloadICS() {
-  // Wedding ceremony: 2026-06-26 08:30 ~ 10:45 JST (UTC+9)
-  // JST 08:30 = UTC 23:30 previous day
+  // 婚禮當天賓客都在沖繩,直接寫死當地時間,不綁時區
+  // (沒有 Z 結尾、沒有 TZID 就是浮動時間,手機顯示就是 08:30)
   var ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
@@ -471,8 +470,8 @@ function downloadICS() {
     'BEGIN:VEVENT',
     'UID:wedding-okinawa-20260626@invite',
     'DTSTAMP:20260101T000000Z',
-    'DTSTART:20260625T233000Z',
-    'DTEND:20260626T014500Z',
+    'DTSTART:20260626T083000',
+    'DTEND:20260626T104500',
     'SUMMARY:沖繩教堂婚禮',
     'DESCRIPTION:請於 09:00 前抵達\\n教堂婚禮儀式 09:30-10:30\\n12:00 燒肉本部牧場 After Party\\n\\nDress Code: 藍白色主題,襯衫洋裝,禁止拖鞋',
     'LOCATION:Eines Villa Di Nozze Okinawa, 沖縄県名護市字山入端潮平川原 361',
