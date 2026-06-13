@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "wedding",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-c",
+        "import functools,http.server,socketserver; h=functools.partial(http.server.SimpleHTTPRequestHandler, directory='/Users/harriswork/Documents/work/Project/Wedding/OkinawaWedding'); socketserver.TCPServer(('127.0.0.1',4599),h).serve_forever()"
+      ],
+      "port": 4599
+    }
+  ]
+}
