@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>服裝配色 · 沖繩教堂婚禮 · Dress Code</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans TC', -apple-system, sans-serif;
+    background: linear-gradient(180deg, #E6F1FB 0%, #F8FCFF 50%, #FFFFFF 100%);
+    background-attachment: fixed;
+    color: #2C3E50;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* Back link */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 24px 0 0;
+    font-size: 13px;
+    color: #185FA5;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: #0C447C; }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 32px 20px 36px;
+  }
+  .hero-tag {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #185FA5;
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: #0C447C;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+  .hero-title-zh {
+    font-size: 17px;
+    color: #185FA5;
+    font-weight: 400;
+    letter-spacing: 6px;
+    margin-bottom: 26px;
+  }
+  .hero-divider {
+    width: 50px;
+    height: 1px;
+    background: #185FA5;
+    margin: 0 auto 24px;
+    opacity: 0.4;
+  }
+  .hero-sub {
+    font-size: 14px;
+    color: #5F8AAD;
+    line-height: 1.9;
+  }
+
+  /* Theme palette */
+  .theme-section {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 0.5px solid rgba(181, 212, 244, 0.4);
+    box-shadow: 0 2px 20px rgba(55, 138, 221, 0.05);
+    text-align: center;
+  }
+  .theme-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #5F8AAD;
+    margin-bottom: 16px;
+  }
+  .palette {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .swatch {
+    text-align: center;
+    font-size: 10px;
+    color: #5F8AAD;
+    letter-spacing: 0.5px;
+  }
+  .swatch .dot {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin: 0 auto 6px;
+    box-shadow: 0 2px 8px rgba(55, 138, 221, 0.15);
+  }
+  .dot.navy  { background: linear-gradient(135deg, #2C4A75, #0C2E52); }
+  .dot.royal { background: linear-gradient(135deg, #4F7FD6, #2C56A8); }
+  .dot.denim { background: linear-gradient(135deg, #6E97C4, #4D77A8); }
+  .dot.sky   { background: linear-gradient(135deg, #AFD0F0, #8FB8E8); }
+  .dot.white { background: #FFFFFF; border: 1px solid #D6E4F4; }
+  .dot.cream { background: linear-gradient(135deg, #F3EEE2, #E7DFCB); }
+
+  /* Choice cards */
+  .choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .choice {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    border-radius: 18px;
+    padding: 40px 20px 32px;
+    text-align: center;
+    overflow: hidden;
+    border: 0.5px solid rgba(181, 212, 244, 0.5);
+    box-shadow: 0 4px 24px rgba(55, 138, 221, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .choice:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(55, 138, 221, 0.16);
+  }
+  .choice.him {
+    background: linear-gradient(160deg, #EAF3FD 0%, #D6E8FB 100%);
+  }
+  .choice.her {
+    background: linear-gradient(160deg, #F2F7FE 0%, #E3EEFB 100%);
+  }
+  .choice-emoji {
+    font-size: 46px;
+    line-height: 1;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .choice-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #5F8AAD;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  .choice-zh {
+    font-size: 18px;
+    font-weight: 500;
+    color: #0C447C;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+  .choice-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  .choice-dots span {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+  .choice-go {
+    display: inline-block;
+    font-size: 13px;
+    color: #185FA5;
+    letter-spacing: 1px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 20px 10px;
+    color: #5F8AAD;
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+  .footer-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: #185FA5;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 480px) {
+    .hero-title { font-size: 34px; }
+    .hero-title-zh { font-size: 15px; letter-spacing: 4px; }
+    .container { padding: 0 14px 40px; }
+    .choice { padding: 34px 14px 28px; }
+    .choice-emoji { font-size: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <a class="back-link" href="index.html">‹ 返回婚禮資訊</a>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-tag">DRESS CODE</div>
+    <div class="hero-title">Dress Code</div>
+    <div class="hero-title-zh">服裝配色範例</div>
+    <div class="hero-divider"></div>
+    <div class="hero-sub">
+      婚禮主題為「藍 · 白」<br>
+      請選擇要參考的穿搭範例
+    </div>
+  </div>
+
+  <!-- Theme palette -->
+  <div class="theme-section">
+    <div class="theme-label">主題色盤 · COLOR PALETTE</div>
+    <div class="palette">
+      <div class="swatch"><div class="dot navy"></div>海軍藍</div>
+      <div class="swatch"><div class="dot royal"></div>寶藍</div>
+      <div class="swatch"><div class="dot denim"></div>牛仔藍</div>
+      <div class="swatch"><div class="dot sky"></div>淺藍</div>
+      <div class="swatch"><div class="dot white"></div>白</div>
+      <div class="swatch"><div class="dot cream"></div>米白</div>
+    </div>
+  </div>
+
+  <!-- Choices -->
+  <div class="choices">
+
+    <a class="choice him" href="boy-dress-code.html">
+      <span class="choice-emoji">👔</span>
+      <div class="choice-en">For Him</div>
+      <div class="choice-zh">男士配色</div>
+      <div class="choice-dots">
+        <span class="dot navy"></span>
+        <span class="dot denim"></span>
+        <span class="dot white"></span>
+      </div>
+      <span class="choice-go">查看範例 ›</span>
+    </a>
+
+    <a class="choice her" href="girl-dress-code.html">
+      <span class="choice-emoji">👗</span>
+      <div class="choice-en">For Her</div>
+      <div class="choice-zh">女士配色</div>
+      <div class="choice-dots">
+        <span class="dot sky"></span>
+        <span class="dot royal"></span>
+        <span class="dot white"></span>
+      </div>
+      <span class="choice-go">查看範例 ›</span>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-mark">— Blue &amp; White —</div>
+    <div>SEE YOU IN OKINAWA</div>
+  </div>
+
+</div>
+
+</body>
+</html>
